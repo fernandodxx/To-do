@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get "projects/index"
-  get "/projects/:id", to: "projects#show", as: "project"
+  resources :projects
   resources :todos
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -13,5 +12,5 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   # Defines the root path route ("/")
-  # root "posts#index"
+  root "projects#index"
 end
